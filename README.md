@@ -1,5 +1,8 @@
 # BetterCrewlink OBS overlay
 
+<h2>[Live app](https://obs.bettercrewl.ink)</h2>
+
+
 ## Available Scripts
 
 In the project directory, you can run:
