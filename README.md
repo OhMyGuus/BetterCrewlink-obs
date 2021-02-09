@@ -1,6 +1,6 @@
 # BetterCrewlink OBS overlay
 
-<h2> <a href="https://obs.bettercrewl.ink"> Live app </a></h2>
+<h2> <a href="https://obs.bettercrewlink.app"> Live app </a></h2>
 
 
 ## Available Scripts
