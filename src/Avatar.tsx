@@ -9,7 +9,6 @@ import {
 } from "./common/cosmetics";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 
-
 // import Tooltip from '@material-ui/core/Tooltip';
 import { overlayPlayer } from "./common/AmongUsState";
 
@@ -77,7 +76,6 @@ const Avatar: React.FC<AvatarProps> = function ({
   if (!image) image = players[status][0];
   const classes = useStyles();
   let icon;
-
 
   return (
     <>
@@ -194,7 +192,12 @@ function Canvas({
           }}
         >
           <img src={src} ref={image} className={classes.base} />
-          <img src={skins[skin]} ref={skinImg} className={classes.skin} />
+          <img
+            src={skins[skin]}
+            ref={skinImg}
+            style={{ top: skin === 17 ? "0%" : undefined }}
+            className={classes.skin}
+          />
 
           {overflow && (
             <img

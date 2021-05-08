@@ -117,7 +117,27 @@ import hat90_11 from '../static/hats/90-11.png'; // @ts-ignore
 import hat91 from '../static/hats/91.png'; // @ts-ignore
 import hat92 from '../static/hats/92.png'; // @ts-ignore
 import hat93 from '../static/hats/93.png';// @ts-ignore
-import hat94 from '../static/hats/94.png';
+import hat94 from '../static/hats/94.png';// @ts-ignore
+import hat95 from '../static/hats/95.png'; // @ts-ignore
+import hat96 from '../static/hats/96.png'; // @ts-ignore
+import hat97 from '../static/hats/97.png'; // @ts-ignore
+import hat98 from '../static/hats/98.png'; // @ts-ignore
+import hat99 from '../static/hats/99.png'; // @ts-ignore
+import hat100 from '../static/hats/100.png'; // @ts-ignore
+import hat101 from '../static/hats/101.png'; // @ts-ignore
+import hat102 from '../static/hats/102.png'; // @ts-ignore
+import hat103 from '../static/hats/103.png'; // @ts-ignore
+import hat104 from '../static/hats/104.png'; // @ts-ignore
+import hat105 from '../static/hats/105.png'; // @ts-ignore
+import hat106 from '../static/hats/106.png'; // @ts-ignore
+import hat107 from '../static/hats/107.png'; // @ts-ignore
+import hat108 from '../static/hats/108.png'; // @ts-ignore
+import hat109 from '../static/hats/109.png'; // @ts-ignore
+import hat110 from '../static/hats/110.png'; // @ts-ignore
+import hat111 from '../static/hats/111.png'; // @ts-ignore
+import hat112 from '../static/hats/112.png'; // @ts-ignore
+import hat113 from '../static/hats/113.png'; // @ts-ignore
+import hat114 from '../static/hats/114.png'; // @ts-ignore
 
 // @ts-ignore
 import skin1 from '../static/skins/1.png'; // @ts-ignore
@@ -134,7 +154,10 @@ import skin11 from '../static/skins/11.png'; // @ts-ignore
 import skin12 from '../static/skins/12.png'; // @ts-ignore
 import skin13 from '../static/skins/13.png'; // @ts-ignore
 import skin14 from '../static/skins/14.png'; // @ts-ignore
-import skin15 from '../static/skins/15.png';
+import skin15 from '../static/skins/15.png';// @ts-ignore
+import skin16 from '../static/skins/16.png'; // @ts-ignore
+import skin17 from '../static/skins/17.png'; // @ts-ignore
+import skin18 from '../static/skins/18.png';// @ts-ignore
 
 // @ts-ignore
 import redAlive from '../static/players/red-alive.png'; // @ts-ignore
@@ -216,6 +239,9 @@ export const skins = [
 	skin13,
 	skin14,
 	skin15,
+	skin16,
+	skin17,
+	skin18,
 ];
 
 export const hatOffsets: { [key in number]: string | undefined } = {
@@ -225,9 +251,11 @@ export const hatOffsets: { [key in number]: string | undefined } = {
 	35: '-50%',
 	77: '-50%',
 	90: '-50%',
+	103: '-50%',
 };
 
-export const backLayerHats = new Set([39, 4, 6, 15, 29, 42, 75, 85]);
+export const backLayerHats = new Set([39, 4, 6, 15, 29, 42, 75, 85, 102, 105, 106, 104, 103]);
+const coloredHatsIds = new Set([77, 90]);
 
 export const coloredHats: { [key in string]: string | undefined } = {
 	77_0: hat77_0,
@@ -258,7 +286,7 @@ export const coloredHats: { [key in string]: string | undefined } = {
 };
 
 export const hats = [
-	hat1,
+	undefined,
 	hat1,
 	hat2,
 	hat3,
@@ -353,4 +381,24 @@ export const hats = [
 	hat92,
 	hat93,
 	hat94,
+	hat95,
+	hat96,
+	hat97,
+	hat98,
+	hat99,
+	hat100,
+	hat101,
+	hat102,
+	hat103,
+	hat104,
+	hat105,
+	hat106,
+	hat107,
+	hat108,
+	hat109,
+	hat110,
+	hat111,
+	hat112,
+	hat113,
+	hat114,
 ];
