@@ -42,6 +42,7 @@ export interface CanvasProps {
   borderColor: string;
   color: number;
   overflow: boolean;
+  mod: MODS;
 }
 
 export interface AvatarProps {
@@ -99,6 +100,7 @@ const Avatar: React.FC<AvatarProps> = function ({
         }
         size={size}
         overflow={overflow}
+        mod={mod}
       />
       {icon}
     </>
@@ -166,6 +168,7 @@ function Canvas({
   borderColor,
   color,
   overflow,
+  mod
 }: CanvasProps) {
   const hatImg = useRef<HTMLImageElement>(null);
   const skinImg = useRef<HTMLImageElement>(null);
@@ -202,7 +205,7 @@ function Canvas({
             className={classes.skin}
           />
 
-          {overflow && (
+          {overflow && mod !== 'TOWN_OF_IMPOSTORS' && (
             <img
               src={coloredHats[`${hat}${color}`] || hats[hat]}
               ref={hatImg}
@@ -210,7 +213,7 @@ function Canvas({
             />
           )}
         </div>
-        {!overflow && (
+        {!overflow && mod !== 'TOWN_OF_IMPOSTORS' && (
           <img
             src={coloredHats[`${hat}${color}`] || hats[hat]}
             ref={hatImg}
