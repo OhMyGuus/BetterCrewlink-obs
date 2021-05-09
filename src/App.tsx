@@ -88,7 +88,7 @@ const App: React.FC = function () {
     mod: "NONE",
   });
 
-  const supportedmods = ["NONE", "TOWN_OF_IMPOSTORS", "TOWN_OF_US"];
+  const supportedmods = ["NONE", "TOWN_OF_IMPOSTORS", "TOWN_OF_US", "OTHER_ROLES"];
   //   const socketRef = useRef<Socket | undefined>(undefined);
   useEffect(() => {
     let server = query.get("server");
