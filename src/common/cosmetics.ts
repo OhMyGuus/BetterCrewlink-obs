@@ -536,15 +536,15 @@ import OtherRoles_player17 from "../static/players/OtherRoles/player/17.png"; //
 import OtherRoles_player18 from "../static/players/OtherRoles/player/18.png"; // @ts-ignore
 import OtherRoles_player19 from "../static/players/OtherRoles/player/19.png"; // @ts-ignore
 import OtherRoles_player20 from "../static/players/OtherRoles/player/20.png"; // @ts-ignore
-import OtherRoles_player21 from "../static/players/OtherRoles/player/20.png"; // @ts-ignore
-import OtherRoles_player22 from "../static/players/OtherRoles/player/20.png"; // @ts-ignore
-import OtherRoles_player23 from "../static/players/OtherRoles/player/20.png"; // @ts-ignore
-import OtherRoles_player24 from "../static/players/OtherRoles/player/20.png"; // @ts-ignore
-import OtherRoles_player25 from "../static/players/OtherRoles/player/20.png"; // @ts-ignore
-import OtherRoles_player26 from "../static/players/OtherRoles/player/20.png"; // @ts-ignore
-import OtherRoles_player27 from "../static/players/OtherRoles/player/20.png"; // @ts-ignore
-import OtherRoles_player28 from "../static/players/OtherRoles/player/20.png"; // @ts-ignore
-import OtherRoles_player29 from "../static/players/OtherRoles/player/20.png"; // @ts-ignore
+import OtherRoles_player21 from "../static/players/OtherRoles/player/21.png"; // @ts-ignore
+import OtherRoles_player22 from "../static/players/OtherRoles/player/22.png"; // @ts-ignore
+import OtherRoles_player23 from "../static/players/OtherRoles/player/23.png"; // @ts-ignore
+import OtherRoles_player24 from "../static/players/OtherRoles/player/24.png"; // @ts-ignore
+import OtherRoles_player25 from "../static/players/OtherRoles/player/25.png"; // @ts-ignore
+import OtherRoles_player26 from "../static/players/OtherRoles/player/26.png"; // @ts-ignore
+import OtherRoles_player27 from "../static/players/OtherRoles/player/27.png"; // @ts-ignore
+import OtherRoles_player28 from "../static/players/OtherRoles/player/28.png"; // @ts-ignore
+import OtherRoles_player29 from "../static/players/OtherRoles/player/29.png"; // @ts-ignore
 
 // @ts-ignore
 import none_ghost0 from "../static/players/none/ghost/0.png"; // @ts-ignore
