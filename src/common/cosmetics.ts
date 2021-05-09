@@ -421,6 +421,38 @@ export const playerColors = {
     ["#151515", "#0d0d0d"],
     ["#ffffff", "#dcdcdc"],
   ],
+  OTHER_ROLES: [
+    ["#c61111", "#7a0838"],
+    ["#132ed2", "#09158e"],
+    ["#11802d", "#0a4d2e"],
+    ["#ee54bb", "#ac2bae"],
+    ["#f07d0d", "#b43e15"],
+    ["#f6f657", "#c38822"],
+    ["#3f474e", "#1e1f26"],
+    ["#d7e1f1", "#8495c0"],
+    ["#6b2fbc", "#3b177c"],
+    ["#71491e", "#5e2615"],
+    ["#38ffdd", "#24a9bf"],
+    ["#50f039", "#15a842"],
+    ["#efbfc0", "#b67772"],
+    ["#6d071a", "#36020b"],
+    ["#9a8c3d", "#685f28"],
+    ["#1684b0", "#0f5975"],
+    ["#6fc09c", "#41946f"],
+    ["#ad7ec9", "#833acb"],
+    ["#a06538", "#730f4e"],
+    ["#ffa477", "#ee8064"],
+    ["#708f2e", "#485c1d"],
+    ["#ff3366", "#e8003a"],
+    ["#939393", "#787878"],
+    ["#006369", "#003d36"],
+    ["#ffffff", "#0c0c0c"],
+    ["#400847", "#182074"],
+    ["#dbfd2f", "#899e1e"],
+    ["#f74417", "#9b2e0f"],
+    ["#357b9e", "#162b62"],
+    ["#a8dfff", "#599fc8"],
+  ],
 };
 
 // @ts-ignore
@@ -482,10 +514,37 @@ import ToU_player16 from "../static/players/ToU/player/16.png"; // @ts-ignore
 import ToU_player17 from "../static/players/ToU/player/17.png"; // @ts-ignore
 import ToU_player18 from "../static/players/ToU/player/18.png"; // @ts-ignore
 import ToU_player19 from "../static/players/ToU/player/19.png"; // @ts-ignore
-import ToU_player20 from "../static/players/ToU/player/20.png"; // @ts-ignore
-import ToU_player21 from "../static/players/ToU/player/21.png"; // @ts-ignore
-import ToU_player22 from "../static/players/ToU/player/22.png"; // @ts-ignore
-import ToU_player23 from "../static/players/ToU/player/23.png"; // @ts-ignore
+
+import OtherRoles_player0 from "../static/players/OtherRoles/player/0.png"; // @ts-ignore
+import OtherRoles_player1 from "../static/players/OtherRoles/player/1.png"; // @ts-ignore
+import OtherRoles_player2 from "../static/players/OtherRoles/player/2.png"; // @ts-ignore
+import OtherRoles_player3 from "../static/players/OtherRoles/player/3.png"; // @ts-ignore
+import OtherRoles_player4 from "../static/players/OtherRoles/player/4.png"; // @ts-ignore
+import OtherRoles_player5 from "../static/players/OtherRoles/player/5.png"; // @ts-ignore
+import OtherRoles_player6 from "../static/players/OtherRoles/player/6.png"; // @ts-ignore
+import OtherRoles_player7 from "../static/players/OtherRoles/player/7.png"; // @ts-ignore
+import OtherRoles_player8 from "../static/players/OtherRoles/player/8.png"; // @ts-ignore
+import OtherRoles_player9 from "../static/players/OtherRoles/player/9.png"; // @ts-ignore
+import OtherRoles_player10 from "../static/players/OtherRoles/player/10.png"; // @ts-ignore
+import OtherRoles_player11 from "../static/players/OtherRoles/player/11.png"; // @ts-ignore
+import OtherRoles_player12 from "../static/players/OtherRoles/player/12.png"; // @ts-ignore
+import OtherRoles_player13 from "../static/players/OtherRoles/player/13.png"; // @ts-ignore
+import OtherRoles_player14 from "../static/players/OtherRoles/player/14.png"; // @ts-ignore
+import OtherRoles_player15 from "../static/players/OtherRoles/player/15.png"; // @ts-ignore
+import OtherRoles_player16 from "../static/players/OtherRoles/player/16.png"; // @ts-ignore
+import OtherRoles_player17 from "../static/players/OtherRoles/player/17.png"; // @ts-ignore
+import OtherRoles_player18 from "../static/players/OtherRoles/player/18.png"; // @ts-ignore
+import OtherRoles_player19 from "../static/players/OtherRoles/player/19.png"; // @ts-ignore
+import OtherRoles_player20 from "../static/players/OtherRoles/player/20.png"; // @ts-ignore
+import OtherRoles_player21 from "../static/players/OtherRoles/player/20.png"; // @ts-ignore
+import OtherRoles_player22 from "../static/players/OtherRoles/player/20.png"; // @ts-ignore
+import OtherRoles_player23 from "../static/players/OtherRoles/player/20.png"; // @ts-ignore
+import OtherRoles_player24 from "../static/players/OtherRoles/player/20.png"; // @ts-ignore
+import OtherRoles_player25 from "../static/players/OtherRoles/player/20.png"; // @ts-ignore
+import OtherRoles_player26 from "../static/players/OtherRoles/player/20.png"; // @ts-ignore
+import OtherRoles_player27 from "../static/players/OtherRoles/player/20.png"; // @ts-ignore
+import OtherRoles_player28 from "../static/players/OtherRoles/player/20.png"; // @ts-ignore
+import OtherRoles_player29 from "../static/players/OtherRoles/player/20.png"; // @ts-ignore
 
 // @ts-ignore
 import none_ghost0 from "../static/players/none/ghost/0.png"; // @ts-ignore
@@ -546,10 +605,37 @@ import ToU_ghost16 from "../static/players/ToU/ghost/16.png"; // @ts-ignore
 import ToU_ghost17 from "../static/players/ToU/ghost/17.png"; // @ts-ignore
 import ToU_ghost18 from "../static/players/ToU/ghost/18.png"; // @ts-ignore
 import ToU_ghost19 from "../static/players/ToU/ghost/19.png"; // @ts-ignore
-import ToU_ghost20 from "../static/players/ToU/ghost/20.png"; // @ts-ignore
-import ToU_ghost21 from "../static/players/ToU/ghost/21.png"; // @ts-ignore
-import ToU_ghost22 from "../static/players/ToU/ghost/22.png"; // @ts-ignore
-import ToU_ghost23 from "../static/players/ToU/ghost/23.png"; // @ts-ignore
+
+import OtherRoles_ghost0 from "../static/players/OtherRoles/ghost/0.png"; // @ts-ignore
+import OtherRoles_ghost1 from "../static/players/OtherRoles/ghost/1.png"; // @ts-ignore
+import OtherRoles_ghost2 from "../static/players/OtherRoles/ghost/2.png"; // @ts-ignore
+import OtherRoles_ghost3 from "../static/players/OtherRoles/ghost/3.png"; // @ts-ignore
+import OtherRoles_ghost4 from "../static/players/OtherRoles/ghost/4.png"; // @ts-ignore
+import OtherRoles_ghost5 from "../static/players/OtherRoles/ghost/5.png"; // @ts-ignore
+import OtherRoles_ghost6 from "../static/players/OtherRoles/ghost/6.png"; // @ts-ignore
+import OtherRoles_ghost7 from "../static/players/OtherRoles/ghost/7.png"; // @ts-ignore
+import OtherRoles_ghost8 from "../static/players/OtherRoles/ghost/8.png"; // @ts-ignore
+import OtherRoles_ghost9 from "../static/players/OtherRoles/ghost/9.png"; // @ts-ignore
+import OtherRoles_ghost10 from "../static/players/OtherRoles/ghost/10.png"; // @ts-ignore
+import OtherRoles_ghost11 from "../static/players/OtherRoles/ghost/11.png"; // @ts-ignore
+import OtherRoles_ghost12 from "../static/players/OtherRoles/ghost/12.png"; // @ts-ignore
+import OtherRoles_ghost13 from "../static/players/OtherRoles/ghost/13.png"; // @ts-ignore
+import OtherRoles_ghost14 from "../static/players/OtherRoles/ghost/14.png"; // @ts-ignore
+import OtherRoles_ghost15 from "../static/players/OtherRoles/ghost/15.png"; // @ts-ignore
+import OtherRoles_ghost16 from "../static/players/OtherRoles/ghost/16.png"; // @ts-ignore
+import OtherRoles_ghost17 from "../static/players/OtherRoles/ghost/17.png"; // @ts-ignore
+import OtherRoles_ghost18 from "../static/players/OtherRoles/ghost/18.png"; // @ts-ignore
+import OtherRoles_ghost19 from "../static/players/OtherRoles/ghost/19.png"; // @ts-ignore
+import OtherRoles_ghost20 from "../static/players/OtherRoles/ghost/20.png"; // @ts-ignore
+import OtherRoles_ghost21 from "../static/players/OtherRoles/ghost/21.png"; // @ts-ignore
+import OtherRoles_ghost22 from "../static/players/OtherRoles/ghost/22.png"; // @ts-ignore
+import OtherRoles_ghost23 from "../static/players/OtherRoles/ghost/23.png"; // @ts-ignore
+import OtherRoles_ghost24 from "../static/players/OtherRoles/ghost/24.png"; // @ts-ignore
+import OtherRoles_ghost25 from "../static/players/OtherRoles/ghost/25.png"; // @ts-ignore
+import OtherRoles_ghost26 from "../static/players/OtherRoles/ghost/26.png"; // @ts-ignore
+import OtherRoles_ghost27 from "../static/players/OtherRoles/ghost/27.png"; // @ts-ignore
+import OtherRoles_ghost28 from "../static/players/OtherRoles/ghost/28.png"; // @ts-ignore
+import OtherRoles_ghost29 from "../static/players/OtherRoles/ghost/29.png"; // @ts-ignore
 
 export const players = {
   NONE: {
@@ -682,5 +768,71 @@ export const players = {
       ToU_ghost18,
       ToU_ghost19,
     ],
+    OTHER_ROLES: {
+      alive: [
+        OtherRoles_player0,
+        OtherRoles_player1,
+        OtherRoles_player2,
+        OtherRoles_player3,
+        OtherRoles_player4,
+        OtherRoles_player5,
+        OtherRoles_player6,
+        OtherRoles_player7,
+        OtherRoles_player8,
+        OtherRoles_player9,
+        OtherRoles_player10,
+        OtherRoles_player11,
+        OtherRoles_player12,
+        OtherRoles_player13,
+        OtherRoles_player14,
+        OtherRoles_player15,
+        OtherRoles_player16,
+        OtherRoles_player17,
+        OtherRoles_player18,
+        OtherRoles_player19,
+        OtherRoles_player20,
+        OtherRoles_player21,
+        OtherRoles_player22,
+        OtherRoles_player23,
+        OtherRoles_player24,
+        OtherRoles_player25,
+        OtherRoles_player26,
+        OtherRoles_player27,
+        OtherRoles_player28,
+        OtherRoles_player29,
+      ],
+      dead: [
+        OtherRoles_ghost0,
+        OtherRoles_ghost1,
+        OtherRoles_ghost2,
+        OtherRoles_ghost3,
+        OtherRoles_ghost4,
+        OtherRoles_ghost5,
+        OtherRoles_ghost6,
+        OtherRoles_ghost7,
+        OtherRoles_ghost8,
+        OtherRoles_ghost9,
+        OtherRoles_ghost10,
+        OtherRoles_ghost11,
+        OtherRoles_ghost12,
+        OtherRoles_ghost13,
+        OtherRoles_ghost14,
+        OtherRoles_ghost15,
+        OtherRoles_ghost16,
+        OtherRoles_ghost17,
+        OtherRoles_ghost18,
+        OtherRoles_ghost19,
+        OtherRoles_ghost20,
+        OtherRoles_ghost21,
+        OtherRoles_ghost22,
+        OtherRoles_ghost23,
+        OtherRoles_ghost24,
+        OtherRoles_ghost25,
+        OtherRoles_ghost26,
+        OtherRoles_ghost27,
+        OtherRoles_ghost28,
+        OtherRoles_ghost29,
+      ],
+    },
   },
 };
