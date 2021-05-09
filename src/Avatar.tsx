@@ -11,6 +11,7 @@ import makeStyles from "@material-ui/core/styles/makeStyles";
 
 // import Tooltip from '@material-ui/core/Tooltip';
 import { overlayPlayer } from "./common/AmongUsState";
+import { MODS } from "./common/ISettings";
 
 const useStyles = makeStyles(() => ({
   canvas: {
@@ -44,6 +45,7 @@ export interface CanvasProps {
 }
 
 export interface AvatarProps {
+  mod: MODS;
   talking: boolean;
   borderColor: string;
   isAlive: boolean;
@@ -60,6 +62,7 @@ export interface AvatarProps {
 }
 
 const Avatar: React.FC<AvatarProps> = function ({
+  mod,
   talking,
   borderColor,
   isAlive,
@@ -72,8 +75,8 @@ const Avatar: React.FC<AvatarProps> = function ({
   onConfigChange,
 }: AvatarProps) {
   const status = isAlive ? "alive" : "dead";
-  let image = players[status][player.colorId];
-  if (!image) image = players[status][0];
+  let image = players[mod][status][player.colorId];
+  if (!image) image = players["NONE"][status][0];
   const classes = useStyles();
   let icon;
 

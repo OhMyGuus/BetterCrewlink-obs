@@ -3,9 +3,10 @@ import { GameState, VoiceState, OverlayState } from "./common/AmongUsState";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import "./App.css";
 import Avatar from "./Avatar";
-import { ISettings } from "./common/ISettings";
+import { ISettings, MODS } from "./common/ISettings";
 import io from "socket.io-client";
 import { Console } from "console";
+import { playerColors } from "./common/cosmetics";
 
 interface UseStylesProps {
   hudHeight: number;
@@ -63,21 +64,6 @@ function useWindowSize() {
   return windowSize;
 }
 
-const playerColors = [
-  ["#C51111", "#7A0838"],
-  ["#132ED1", "#09158E"],
-  ["#117F2D", "#0A4D2E"],
-  ["#ED54BA", "#AB2BAD"],
-  ["#EF7D0D", "#B33E15"],
-  ["#F5F557", "#C38823"],
-  ["#3F474E", "#1E1F26"],
-  ["#8394BF", "#8394BF"],
-  ["#6B2FBB", "#3B177C"],
-  ["#71491E", "#5E2615"],
-  ["#38FEDC", "#24A8BE"],
-  ["#50EF39", "#15A742"],
-];
-
 const iPadRatio = 854 / 579;
 const query = new URLSearchParams(window.location.search.substring(1));
 let loaded = false;
@@ -99,8 +85,10 @@ const App: React.FC = function () {
     meetingOverlay: true,
     serverURL: "",
     secretString: undefined,
+    mod: "NONE",
   });
 
+  const supportedmods = ["NONE", "TOWN_OF_IMPOSTORS", "TOWN_OF_US"];
   //   const socketRef = useRef<Socket | undefined>(undefined);
   useEffect(() => {
     let server = query.get("server");
@@ -113,6 +101,9 @@ const App: React.FC = function () {
       meetingOverlay: query.get("meeting") === "1",
       serverURL: server || "https://bettercrewl.ink",
       secretString: query.get("secret") || undefined,
+      mod: supportedmods.includes(query.get("mod") ?? "")
+        ? (query.get("mod") as "NONE" | "TOWN_OF_IMPOSTORS" | "TOWN_OF_US")
+        : "NONE",
     };
     setSettings(settings);
     if (!settings.secretString || settings.secretString?.length != 9) {
@@ -144,6 +135,10 @@ const App: React.FC = function () {
     });
     loaded = true;
   }, []);
+
+  const colors = useMemo(() => {
+    return playerColors[settings.mod];
+  }, [settings.mod]);
 
   // console.log("update??", voiceState, loaded);
   if ((!settings.secretString || settings.secretString.length != 9) && loaded) {
@@ -181,10 +176,12 @@ const App: React.FC = function () {
           <MeetingHud
             gameState={voiceState.overlayState}
             voiceState={voiceState}
+            colors={colors}
           />
         )}
       {settings.overlayPosition !== "hidden" && (
         <AvatarOverlay
+          mod={settings.mod}
           voiceState={voiceState}
           gameState={voiceState.overlayState}
           position={settings.overlayPosition}
@@ -200,6 +197,7 @@ interface AvatarOverlayProps {
   gameState: OverlayState;
   position: ISettings["overlayPosition"];
   compactOverlay: boolean;
+  mod: MODS;
 }
 
 const AvatarOverlay: React.FC<AvatarOverlayProps> = ({
@@ -207,11 +205,14 @@ const AvatarOverlay: React.FC<AvatarOverlayProps> = ({
   gameState,
   position,
   compactOverlay,
+  mod,
 }: AvatarOverlayProps) => {
   const avatars: JSX.Element[] = [];
   const positionParse = position.replace("1", "");
-	const isOnSide = positionParse == 'right' || positionParse == 'left';
-	const showName = isOnSide && (!compactOverlay || position === 'right1' || position === 'left1');
+  const isOnSide = positionParse == "right" || positionParse == "left";
+  const showName =
+    isOnSide &&
+    (!compactOverlay || position === "right1" || position === "left1");
   const classnames: string[] = ["overlay-wrapper"];
 
   if (
@@ -273,6 +274,7 @@ const AvatarOverlay: React.FC<AvatarOverlayProps> = ({
       <div key={player.id} className="player_wrapper">
         <div>
           <Avatar
+            mod={mod}
             key={player.id}
             // connectionState={!connected ? 'disconnected' : audio ? 'connected' : 'novoice'}
             player={player}
@@ -323,11 +325,13 @@ const AvatarOverlay: React.FC<AvatarOverlayProps> = ({
 interface MeetingHudProps {
   gameState: OverlayState;
   voiceState: VoiceState;
+  colors: string[][];
 }
 
 const MeetingHud: React.FC<MeetingHudProps> = ({
   voiceState,
   gameState,
+  colors,
 }: MeetingHudProps) => {
   const [width, height] = useWindowSize();
 
@@ -367,7 +371,7 @@ const MeetingHud: React.FC<MeetingHudProps> = ({
               ? 1
               : 0,
           boxShadow: `0 0 ${hudHeight / 100}px ${hudHeight / 100}px ${
-            playerColors[player.colorId][0]
+            colors[player.colorId] ? colors[player.colorId][0] : "#C51111"
           }`,
         }}
       />
