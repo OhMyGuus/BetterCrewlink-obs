@@ -6,6 +6,11 @@ import {
   skins,
   players,
   coloredHats,
+  cosmeticType,
+  getCosmetic,
+  redAlive,
+  HatDementions,
+  getHatDementions,
 } from "./common/cosmetics";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 
@@ -32,7 +37,6 @@ const useStyles = makeStyles(() => ({
 }));
 
 export interface CanvasProps {
-  src: string;
   hat: number;
   skin: number;
   isAlive: boolean;
@@ -76,8 +80,6 @@ const Avatar: React.FC<AvatarProps> = function ({
   onConfigChange,
 }: AvatarProps) {
   const status = isAlive ? "alive" : "dead";
-  let image = players[mod][status][player.colorId];
-  if (!image) image = players["NONE"][status][0];
   const classes = useStyles();
   let icon;
 
@@ -85,7 +87,6 @@ const Avatar: React.FC<AvatarProps> = function ({
     <>
       <Canvas
         className={classes.canvas}
-        src={image}
         color={player.colorId}
         hat={showHat === false ? -1 : player.hatId}
         skin={player.skinId - 1}
@@ -108,6 +109,7 @@ const Avatar: React.FC<AvatarProps> = function ({
 };
 
 interface UseCanvasStylesParams {
+  hatDementions: HatDementions;
   backLayerHat: boolean;
   isAlive: boolean;
   hatY: string;
@@ -125,14 +127,13 @@ const useCanvasStyles = makeStyles(() => ({
     zIndex: 2,
   },
   hat: {
-    width: "105%",
-    position: "absolute",
-    top: ({ hatY }: UseCanvasStylesParams) => `calc(22% + ${hatY})`,
-    left: ({ size, paddingLeft }: UseCanvasStylesParams) =>
-      Math.max(2, size / 40) / 2 + paddingLeft,
-    zIndex: ({ backLayerHat }: UseCanvasStylesParams) => (backLayerHat ? 1 : 4),
-    display: ({ isAlive }: UseCanvasStylesParams) =>
-      isAlive ? "block" : "none",
+  	width: ({ hatDementions }: UseCanvasStylesParams) => hatDementions.width,
+		position: 'absolute',
+		top: ({ hatDementions }: UseCanvasStylesParams) => `calc(22% + ${hatDementions.top})`,
+		left: ({ size, paddingLeft, hatDementions }: UseCanvasStylesParams) =>
+			`calc(${hatDementions.left} + ${Math.max(2, size / 40) / 2 + paddingLeft}px)`, //`calc(${hatDementions.left} + ${Math.max(2, size / 40) / 2 + paddingLeft})` ,
+		zIndex: ({ backLayerHat }: UseCanvasStylesParams) => (backLayerHat ? 1 : 4),
+		display: ({ isAlive }: UseCanvasStylesParams) => (isAlive ? 'block' : 'none'),
   },
   skin: {
     position: "absolute",
@@ -159,7 +160,6 @@ const useCanvasStyles = makeStyles(() => ({
 }));
 
 function Canvas({
-  src,
   hat,
   skin,
   isAlive,
@@ -168,12 +168,13 @@ function Canvas({
   borderColor,
   color,
   overflow,
-  mod
+  mod,
 }: CanvasProps) {
   const hatImg = useRef<HTMLImageElement>(null);
   const skinImg = useRef<HTMLImageElement>(null);
   const image = useRef<HTMLImageElement>(null);
   const hatY = hatOffsets[hat] || "-33%";
+  const hatDementions = getHatDementions(hat, mod);
   const classes = useCanvasStyles({
     backLayerHat: backLayerHats.has(hat),
     isAlive,
@@ -182,8 +183,14 @@ function Canvas({
     size,
     borderColor,
     paddingLeft: -7,
+    hatDementions: hatDementions,
   });
-
+  //@ts-ignore
+  const onerror = (e: any) => {
+    console.log("ONERROR: ", e.target.src);
+    e.target.src = undefined;
+    e.target.style.display = "none";
+  };
   return (
     <>
       <div className={classes.avatar}>
@@ -197,27 +204,39 @@ function Canvas({
             transform: "unset",
           }}
         >
-          <img src={src} ref={image} className={classes.base} />
           <img
-            src={skins[skin]}
+            src={getCosmetic(color, isAlive, cosmeticType.base, hat, mod)}
+            ref={image}
+            className={classes.base}
+            //@ts-ignore
+            onError={(e: any) => {
+              e.target.onError = null;
+              e.target.src = redAlive;
+            }}
+          />
+          <img
+            src={getCosmetic(color, isAlive, cosmeticType.skin, hat, mod)}
             ref={skinImg}
             style={{ top: skin === 17 ? "0%" : undefined }}
             className={classes.skin}
+            onError={onerror}
           />
 
-          {overflow && mod !== 'TOWN_OF_IMPOSTORS' && (
+          {overflow && (
             <img
-              src={coloredHats[`${hat}${color}`] || hats[hat]}
+              src={getCosmetic(color, isAlive, cosmeticType.hat, hat, mod)}
               ref={hatImg}
               className={classes.hat}
+              onError={onerror}
             />
           )}
         </div>
-        {!overflow && mod !== 'TOWN_OF_IMPOSTORS' && (
+        {!overflow && (
           <img
-            src={coloredHats[`${hat}${color}`] || hats[hat]}
+            src={getCosmetic(color, isAlive, cosmeticType.hat, hat, mod)}
             ref={hatImg}
             className={classes.hat}
+            onError={onerror}
           />
         )}
       </div>

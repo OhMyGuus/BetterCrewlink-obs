@@ -6,5 +6,4 @@ export interface ISettings {
   meetingOverlay: boolean;
   serverURL: string;
   secretString: string | undefined;
-  mod: MODS;
 }

@@ -77,6 +77,7 @@ const App: React.FC = function () {
     otherDead: {},
     localTalking: false,
     localIsAlive: false,
+    mod: "NONE"
   });
 
   const [settings, setSettings] = useState<ISettings>({
@@ -84,8 +85,7 @@ const App: React.FC = function () {
     overlayPosition: "right",
     meetingOverlay: true,
     serverURL: "",
-    secretString: undefined,
-    mod: "NONE",
+    secretString: undefined
   });
 
   const supportedmods = ["NONE", "TOWN_OF_IMPOSTORS", "TOWN_OF_US", "OTHER_ROLES"];
@@ -137,8 +137,8 @@ const App: React.FC = function () {
   }, []);
 
   const colors = useMemo(() => {
-    return playerColors[settings.mod];
-  }, [settings.mod]);
+    return playerColors[voiceState.mod];
+  }, [voiceState.mod]);
 
   // console.log("update??", voiceState, loaded);
   if ((!settings.secretString || settings.secretString.length != 9) && loaded) {
@@ -181,7 +181,7 @@ const App: React.FC = function () {
         )}
       {settings.overlayPosition !== "hidden" && (
         <AvatarOverlay
-          mod={settings.mod}
+          mod={voiceState.mod}
           voiceState={voiceState}
           gameState={voiceState.overlayState}
           position={settings.overlayPosition}

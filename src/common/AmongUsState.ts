@@ -1,3 +1,4 @@
+import { MODS } from "./ISettings";
 
 export interface OverlayState {
 	gameState: GameState;
@@ -40,4 +41,5 @@ export interface VoiceState {
 	otherDead: OtherTalking;
 	localTalking: boolean;
 	localIsAlive: boolean;
+	mod: MODS;
 }

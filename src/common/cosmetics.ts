@@ -196,19 +196,7 @@ export const hatOffsets: { [key in number]: string | undefined } = {
 };
 
 export const backLayerHats = new Set([
-  39,
-  4,
-  6,
-  15,
-  29,
-  42,
-  75,
-  85,
-  102,
-  105,
-  106,
-  104,
-  103,
+  39, 4, 6, 15, 29, 42, 75, 85, 102, 105, 106, 104, 103,
 ]);
 const coloredHatsIds = new Set([77, 90]);
 
@@ -636,6 +624,7 @@ import OtherRoles_ghost26 from "../static/players/OtherRoles/ghost/26.png"; // @
 import OtherRoles_ghost27 from "../static/players/OtherRoles/ghost/27.png"; // @ts-ignore
 import OtherRoles_ghost28 from "../static/players/OtherRoles/ghost/28.png"; // @ts-ignore
 import OtherRoles_ghost29 from "../static/players/OtherRoles/ghost/29.png"; // @ts-ignore
+import { MODS } from "./ISettings";
 
 export const players = {
   NONE: {
@@ -836,3 +825,90 @@ export const players = {
     ],
   },
 };
+
+export enum cosmeticType {
+  base,
+  hat,
+  skin,
+}
+
+var modHats: {
+  [mod: string]: {
+    defaultWidth: string;
+    defaultTop: string;
+    defaultLeft: string;
+    hats: {
+      [id: number]: {
+        image: string;
+        top: string | undefined;
+        width: string | undefined;
+        left: string | undefined;
+        multi_color: string | undefined;
+      };
+    };
+  };
+} = {};
+export const redAlive = none_player0;
+
+var requestingModHats = false;
+const MODHATS_BASE =
+  "https://raw.githubusercontent.com/OhMyGuus/BetterCrewlink-ModHats/master";
+function getModHat(color: number, id = -1, mod: string) {
+  if (!requestingModHats) {
+    requestingModHats = true;
+    fetch(`${MODHATS_BASE}/hats.json`)
+      .then((response) => response.json())
+      .then((data) => (modHats = data));
+    return undefined;
+  }
+  const hat = modHats[mod]?.hats[id]?.image;
+  const multiColor = modHats[mod]?.hats[id]?.multi_color ? `${color}_` : "";
+  return hat
+    ? `${MODHATS_BASE}/${mod}/${multiColor}${hat}`
+    : hats[id]
+    ? hats[id]
+    : undefined;
+}
+
+export interface HatDementions {
+  top: string;
+  left: string;
+  width: string;
+}
+
+export function getHatDementions(id: number, mod: string): HatDementions {
+  if (!hats[id] && modHats[mod]) {
+    const modHatList = modHats[mod];
+    let hat = modHats[mod]?.hats[id];
+    return {
+      top: hat?.top || modHatList.defaultTop,
+      width: hat?.width || modHatList.defaultWidth,
+      left: hat?.left || modHatList.defaultLeft,
+    };
+  } else {
+    return {
+      top: hatOffsets[id] || "-33%",
+      width: "105%",
+      left: "0%",
+    };
+  }
+}
+
+export const RainbowColorId = -99234;
+export function getCosmetic(
+  color: number,
+  isAlive: boolean,
+  type: cosmeticType,
+  id = -1,
+  mod: MODS = "NONE"
+): string | undefined {
+  if (type === cosmeticType.base) {
+    let base = players[mod][isAlive ? "alive" : "dead"][color];
+    if (!base) base = players["NONE"][isAlive ? "alive" : "dead"][0];
+    return base;
+  }
+  if (type === cosmeticType.hat && mod !== "NONE") {
+    return getModHat(color, id, mod);
+  }
+  return type === cosmeticType.hat ? coloredHats[`${id}${color}`] || hats[id] : skins[id];
+}
