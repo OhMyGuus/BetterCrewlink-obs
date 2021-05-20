@@ -159,6 +159,190 @@ import skin16 from "../static/skins/16.png"; // @ts-ignore
 import skin17 from "../static/skins/17.png"; // @ts-ignore
 import skin18 from "../static/skins/18.png"; // @ts-ignore
 
+
+// @ts-ignore
+import none_player0 from "../static/players/none/player/0.png"; // @ts-ignore
+import none_player1 from "../static/players/none/player/1.png"; // @ts-ignore
+import none_player2 from "../static/players/none/player/2.png"; // @ts-ignore
+import none_player3 from "../static/players/none/player/3.png"; // @ts-ignore
+import none_player4 from "../static/players/none/player/4.png"; // @ts-ignore
+import none_player5 from "../static/players/none/player/5.png"; // @ts-ignore
+import none_player6 from "../static/players/none/player/6.png"; // @ts-ignore
+import none_player7 from "../static/players/none/player/7.png"; // @ts-ignore
+import none_player8 from "../static/players/none/player/8.png"; // @ts-ignore
+import none_player9 from "../static/players/none/player/9.png"; // @ts-ignore
+import none_player10 from "../static/players/none/player/10.png"; // @ts-ignore
+import none_player11 from "../static/players/none/player/11.png"; // @ts-ignore
+
+import ToI_player0 from "../static/players/ToI/player/0.png"; // @ts-ignore
+import ToI_player1 from "../static/players/ToI/player/1.png"; // @ts-ignore
+import ToI_player2 from "../static/players/ToI/player/2.png"; // @ts-ignore
+import ToI_player3 from "../static/players/ToI/player/3.png"; // @ts-ignore
+import ToI_player4 from "../static/players/ToI/player/4.png"; // @ts-ignore
+import ToI_player5 from "../static/players/ToI/player/5.png"; // @ts-ignore
+import ToI_player6 from "../static/players/ToI/player/6.png"; // @ts-ignore
+import ToI_player7 from "../static/players/ToI/player/7.png"; // @ts-ignore
+import ToI_player8 from "../static/players/ToI/player/8.png"; // @ts-ignore
+import ToI_player9 from "../static/players/ToI/player/9.png"; // @ts-ignore
+import ToI_player10 from "../static/players/ToI/player/10.png"; // @ts-ignore
+import ToI_player11 from "../static/players/ToI/player/11.png"; // @ts-ignore
+import ToI_player12 from "../static/players/ToI/player/12.png"; // @ts-ignore
+import ToI_player13 from "../static/players/ToI/player/13.png"; // @ts-ignore
+import ToI_player14 from "../static/players/ToI/player/14.png"; // @ts-ignore
+import ToI_player15 from "../static/players/ToI/player/15.png"; // @ts-ignore
+import ToI_player16 from "../static/players/ToI/player/16.png"; // @ts-ignore
+import ToI_player17 from "../static/players/ToI/player/17.png"; // @ts-ignore
+import ToI_player18 from "../static/players/ToI/player/18.png"; // @ts-ignore
+import ToI_player19 from "../static/players/ToI/player/19.png"; // @ts-ignore
+import ToI_player20 from "../static/players/ToI/player/20.png"; // @ts-ignore
+import ToI_player21 from "../static/players/ToI/player/21.png"; // @ts-ignore
+import ToI_player22 from "../static/players/ToI/player/22.png"; // @ts-ignore
+import ToI_player23 from "../static/players/ToI/player/23.png"; // @ts-ignore
+
+import ToU_player0 from "../static/players/ToU/player/0.png"; // @ts-ignore
+import ToU_player1 from "../static/players/ToU/player/1.png"; // @ts-ignore
+import ToU_player2 from "../static/players/ToU/player/2.png"; // @ts-ignore
+import ToU_player3 from "../static/players/ToU/player/3.png"; // @ts-ignore
+import ToU_player4 from "../static/players/ToU/player/4.png"; // @ts-ignore
+import ToU_player5 from "../static/players/ToU/player/5.png"; // @ts-ignore
+import ToU_player6 from "../static/players/ToU/player/6.png"; // @ts-ignore
+import ToU_player7 from "../static/players/ToU/player/7.png"; // @ts-ignore
+import ToU_player8 from "../static/players/ToU/player/8.png"; // @ts-ignore
+import ToU_player9 from "../static/players/ToU/player/9.png"; // @ts-ignore
+import ToU_player10 from "../static/players/ToU/player/10.png"; // @ts-ignore
+import ToU_player11 from "../static/players/ToU/player/11.png"; // @ts-ignore
+import ToU_player12 from "../static/players/ToU/player/12.png"; // @ts-ignore
+import ToU_player13 from "../static/players/ToU/player/13.png"; // @ts-ignore
+import ToU_player14 from "../static/players/ToU/player/14.png"; // @ts-ignore
+import ToU_player15 from "../static/players/ToU/player/15.png"; // @ts-ignore
+import ToU_player16 from "../static/players/ToU/player/16.png"; // @ts-ignore
+import ToU_player17 from "../static/players/ToU/player/17.png"; // @ts-ignore
+import ToU_player18 from "../static/players/ToU/player/18.png"; // @ts-ignore
+import ToU_player19 from "../static/players/ToU/player/19.png"; // @ts-ignore
+
+import OtherRoles_player0 from "../static/players/OtherRoles/player/0.png"; // @ts-ignore
+import OtherRoles_player1 from "../static/players/OtherRoles/player/1.png"; // @ts-ignore
+import OtherRoles_player2 from "../static/players/OtherRoles/player/2.png"; // @ts-ignore
+import OtherRoles_player3 from "../static/players/OtherRoles/player/3.png"; // @ts-ignore
+import OtherRoles_player4 from "../static/players/OtherRoles/player/4.png"; // @ts-ignore
+import OtherRoles_player5 from "../static/players/OtherRoles/player/5.png"; // @ts-ignore
+import OtherRoles_player6 from "../static/players/OtherRoles/player/6.png"; // @ts-ignore
+import OtherRoles_player7 from "../static/players/OtherRoles/player/7.png"; // @ts-ignore
+import OtherRoles_player8 from "../static/players/OtherRoles/player/8.png"; // @ts-ignore
+import OtherRoles_player9 from "../static/players/OtherRoles/player/9.png"; // @ts-ignore
+import OtherRoles_player10 from "../static/players/OtherRoles/player/10.png"; // @ts-ignore
+import OtherRoles_player11 from "../static/players/OtherRoles/player/11.png"; // @ts-ignore
+import OtherRoles_player12 from "../static/players/OtherRoles/player/12.png"; // @ts-ignore
+import OtherRoles_player13 from "../static/players/OtherRoles/player/13.png"; // @ts-ignore
+import OtherRoles_player14 from "../static/players/OtherRoles/player/14.png"; // @ts-ignore
+import OtherRoles_player15 from "../static/players/OtherRoles/player/15.png"; // @ts-ignore
+import OtherRoles_player16 from "../static/players/OtherRoles/player/16.png"; // @ts-ignore
+import OtherRoles_player17 from "../static/players/OtherRoles/player/17.png"; // @ts-ignore
+import OtherRoles_player18 from "../static/players/OtherRoles/player/18.png"; // @ts-ignore
+import OtherRoles_player19 from "../static/players/OtherRoles/player/19.png"; // @ts-ignore
+import OtherRoles_player20 from "../static/players/OtherRoles/player/20.png"; // @ts-ignore
+import OtherRoles_player21 from "../static/players/OtherRoles/player/21.png"; // @ts-ignore
+import OtherRoles_player22 from "../static/players/OtherRoles/player/22.png"; // @ts-ignore
+import OtherRoles_player23 from "../static/players/OtherRoles/player/23.png"; // @ts-ignore
+import OtherRoles_player24 from "../static/players/OtherRoles/player/24.png"; // @ts-ignore
+import OtherRoles_player25 from "../static/players/OtherRoles/player/25.png"; // @ts-ignore
+import OtherRoles_player26 from "../static/players/OtherRoles/player/26.png"; // @ts-ignore
+import OtherRoles_player27 from "../static/players/OtherRoles/player/27.png"; // @ts-ignore
+import OtherRoles_player28 from "../static/players/OtherRoles/player/28.png"; // @ts-ignore
+import OtherRoles_player29 from "../static/players/OtherRoles/player/29.png"; // @ts-ignore
+
+// @ts-ignore
+import none_ghost0 from "../static/players/none/ghost/0.png"; // @ts-ignore
+import none_ghost1 from "../static/players/none/ghost/1.png"; // @ts-ignore
+import none_ghost2 from "../static/players/none/ghost/2.png"; // @ts-ignore
+import none_ghost3 from "../static/players/none/ghost/3.png"; // @ts-ignore
+import none_ghost4 from "../static/players/none/ghost/4.png"; // @ts-ignore
+import none_ghost5 from "../static/players/none/ghost/5.png"; // @ts-ignore
+import none_ghost6 from "../static/players/none/ghost/6.png"; // @ts-ignore
+import none_ghost7 from "../static/players/none/ghost/7.png"; // @ts-ignore
+import none_ghost8 from "../static/players/none/ghost/8.png"; // @ts-ignore
+import none_ghost9 from "../static/players/none/ghost/9.png"; // @ts-ignore
+import none_ghost10 from "../static/players/none/ghost/10.png"; // @ts-ignore
+import none_ghost11 from "../static/players/none/ghost/11.png"; // @ts-ignore
+
+import ToI_ghost0 from "../static/players/ToI/ghost/0.png"; // @ts-ignore
+import ToI_ghost1 from "../static/players/ToI/ghost/1.png"; // @ts-ignore
+import ToI_ghost2 from "../static/players/ToI/ghost/2.png"; // @ts-ignore
+import ToI_ghost3 from "../static/players/ToI/ghost/3.png"; // @ts-ignore
+import ToI_ghost4 from "../static/players/ToI/ghost/4.png"; // @ts-ignore
+import ToI_ghost5 from "../static/players/ToI/ghost/5.png"; // @ts-ignore
+import ToI_ghost6 from "../static/players/ToI/ghost/6.png"; // @ts-ignore
+import ToI_ghost7 from "../static/players/ToI/ghost/7.png"; // @ts-ignore
+import ToI_ghost8 from "../static/players/ToI/ghost/8.png"; // @ts-ignore
+import ToI_ghost9 from "../static/players/ToI/ghost/9.png"; // @ts-ignore
+import ToI_ghost10 from "../static/players/ToI/ghost/10.png"; // @ts-ignore
+import ToI_ghost11 from "../static/players/ToI/ghost/11.png"; // @ts-ignore
+import ToI_ghost12 from "../static/players/ToI/ghost/12.png"; // @ts-ignore
+import ToI_ghost13 from "../static/players/ToI/ghost/13.png"; // @ts-ignore
+import ToI_ghost14 from "../static/players/ToI/ghost/14.png"; // @ts-ignore
+import ToI_ghost15 from "../static/players/ToI/ghost/15.png"; // @ts-ignore
+import ToI_ghost16 from "../static/players/ToI/ghost/16.png"; // @ts-ignore
+import ToI_ghost17 from "../static/players/ToI/ghost/17.png"; // @ts-ignore
+import ToI_ghost18 from "../static/players/ToI/ghost/18.png"; // @ts-ignore
+import ToI_ghost19 from "../static/players/ToI/ghost/19.png"; // @ts-ignore
+import ToI_ghost20 from "../static/players/ToI/ghost/20.png"; // @ts-ignore
+import ToI_ghost21 from "../static/players/ToI/ghost/21.png"; // @ts-ignore
+import ToI_ghost22 from "../static/players/ToI/ghost/22.png"; // @ts-ignore
+import ToI_ghost23 from "../static/players/ToI/ghost/23.png"; // @ts-ignore
+
+import ToU_ghost0 from "../static/players/ToU/ghost/0.png"; // @ts-ignore
+import ToU_ghost1 from "../static/players/ToU/ghost/1.png"; // @ts-ignore
+import ToU_ghost2 from "../static/players/ToU/ghost/2.png"; // @ts-ignore
+import ToU_ghost3 from "../static/players/ToU/ghost/3.png"; // @ts-ignore
+import ToU_ghost4 from "../static/players/ToU/ghost/4.png"; // @ts-ignore
+import ToU_ghost5 from "../static/players/ToU/ghost/5.png"; // @ts-ignore
+import ToU_ghost6 from "../static/players/ToU/ghost/6.png"; // @ts-ignore
+import ToU_ghost7 from "../static/players/ToU/ghost/7.png"; // @ts-ignore
+import ToU_ghost8 from "../static/players/ToU/ghost/8.png"; // @ts-ignore
+import ToU_ghost9 from "../static/players/ToU/ghost/9.png"; // @ts-ignore
+import ToU_ghost10 from "../static/players/ToU/ghost/10.png"; // @ts-ignore
+import ToU_ghost11 from "../static/players/ToU/ghost/11.png"; // @ts-ignore
+import ToU_ghost12 from "../static/players/ToU/ghost/12.png"; // @ts-ignore
+import ToU_ghost13 from "../static/players/ToU/ghost/13.png"; // @ts-ignore
+import ToU_ghost14 from "../static/players/ToU/ghost/14.png"; // @ts-ignore
+import ToU_ghost15 from "../static/players/ToU/ghost/15.png"; // @ts-ignore
+import ToU_ghost16 from "../static/players/ToU/ghost/16.png"; // @ts-ignore
+import ToU_ghost17 from "../static/players/ToU/ghost/17.png"; // @ts-ignore
+import ToU_ghost18 from "../static/players/ToU/ghost/18.png"; // @ts-ignore
+import ToU_ghost19 from "../static/players/ToU/ghost/19.png"; // @ts-ignore
+
+import OtherRoles_ghost0 from "../static/players/OtherRoles/ghost/0.png"; // @ts-ignore
+import OtherRoles_ghost1 from "../static/players/OtherRoles/ghost/1.png"; // @ts-ignore
+import OtherRoles_ghost2 from "../static/players/OtherRoles/ghost/2.png"; // @ts-ignore
+import OtherRoles_ghost3 from "../static/players/OtherRoles/ghost/3.png"; // @ts-ignore
+import OtherRoles_ghost4 from "../static/players/OtherRoles/ghost/4.png"; // @ts-ignore
+import OtherRoles_ghost5 from "../static/players/OtherRoles/ghost/5.png"; // @ts-ignore
+import OtherRoles_ghost6 from "../static/players/OtherRoles/ghost/6.png"; // @ts-ignore
+import OtherRoles_ghost7 from "../static/players/OtherRoles/ghost/7.png"; // @ts-ignore
+import OtherRoles_ghost8 from "../static/players/OtherRoles/ghost/8.png"; // @ts-ignore
+import OtherRoles_ghost9 from "../static/players/OtherRoles/ghost/9.png"; // @ts-ignore
+import OtherRoles_ghost10 from "../static/players/OtherRoles/ghost/10.png"; // @ts-ignore
+import OtherRoles_ghost11 from "../static/players/OtherRoles/ghost/11.png"; // @ts-ignore
+import OtherRoles_ghost12 from "../static/players/OtherRoles/ghost/12.png"; // @ts-ignore
+import OtherRoles_ghost13 from "../static/players/OtherRoles/ghost/13.png"; // @ts-ignore
+import OtherRoles_ghost14 from "../static/players/OtherRoles/ghost/14.png"; // @ts-ignore
+import OtherRoles_ghost15 from "../static/players/OtherRoles/ghost/15.png"; // @ts-ignore
+import OtherRoles_ghost16 from "../static/players/OtherRoles/ghost/16.png"; // @ts-ignore
+import OtherRoles_ghost17 from "../static/players/OtherRoles/ghost/17.png"; // @ts-ignore
+import OtherRoles_ghost18 from "../static/players/OtherRoles/ghost/18.png"; // @ts-ignore
+import OtherRoles_ghost19 from "../static/players/OtherRoles/ghost/19.png"; // @ts-ignore
+import OtherRoles_ghost20 from "../static/players/OtherRoles/ghost/20.png"; // @ts-ignore
+import OtherRoles_ghost21 from "../static/players/OtherRoles/ghost/21.png"; // @ts-ignore
+import OtherRoles_ghost22 from "../static/players/OtherRoles/ghost/22.png"; // @ts-ignore
+import OtherRoles_ghost23 from "../static/players/OtherRoles/ghost/23.png"; // @ts-ignore
+import OtherRoles_ghost24 from "../static/players/OtherRoles/ghost/24.png"; // @ts-ignore
+import OtherRoles_ghost25 from "../static/players/OtherRoles/ghost/25.png"; // @ts-ignore
+import OtherRoles_ghost26 from "../static/players/OtherRoles/ghost/26.png"; // @ts-ignore
+import OtherRoles_ghost27 from "../static/players/OtherRoles/ghost/27.png"; // @ts-ignore
+import OtherRoles_ghost28 from "../static/players/OtherRoles/ghost/28.png"; // @ts-ignore
+import OtherRoles_ghost29 from "../static/players/OtherRoles/ghost/29.png"; // @ts-ignore
+import { MODS } from "./ISettings";
+
 export interface PlayerImageColors {
   alive: string[];
   dead: string[];
@@ -409,7 +593,7 @@ export const playerColors = {
     ["#151515", "#0d0d0d"],
     ["#ffffff", "#dcdcdc"],
   ],
-  OTHER_ROLES: [
+  THE_OTHER_ROLES: [
     ["#c61111", "#7a0838"],
     ["#132ed2", "#09158e"],
     ["#11802d", "#0a4d2e"],
@@ -443,188 +627,6 @@ export const playerColors = {
   ],
 };
 
-// @ts-ignore
-import none_player0 from "../static/players/none/player/0.png"; // @ts-ignore
-import none_player1 from "../static/players/none/player/1.png"; // @ts-ignore
-import none_player2 from "../static/players/none/player/2.png"; // @ts-ignore
-import none_player3 from "../static/players/none/player/3.png"; // @ts-ignore
-import none_player4 from "../static/players/none/player/4.png"; // @ts-ignore
-import none_player5 from "../static/players/none/player/5.png"; // @ts-ignore
-import none_player6 from "../static/players/none/player/6.png"; // @ts-ignore
-import none_player7 from "../static/players/none/player/7.png"; // @ts-ignore
-import none_player8 from "../static/players/none/player/8.png"; // @ts-ignore
-import none_player9 from "../static/players/none/player/9.png"; // @ts-ignore
-import none_player10 from "../static/players/none/player/10.png"; // @ts-ignore
-import none_player11 from "../static/players/none/player/11.png"; // @ts-ignore
-
-import ToI_player0 from "../static/players/ToI/player/0.png"; // @ts-ignore
-import ToI_player1 from "../static/players/ToI/player/1.png"; // @ts-ignore
-import ToI_player2 from "../static/players/ToI/player/2.png"; // @ts-ignore
-import ToI_player3 from "../static/players/ToI/player/3.png"; // @ts-ignore
-import ToI_player4 from "../static/players/ToI/player/4.png"; // @ts-ignore
-import ToI_player5 from "../static/players/ToI/player/5.png"; // @ts-ignore
-import ToI_player6 from "../static/players/ToI/player/6.png"; // @ts-ignore
-import ToI_player7 from "../static/players/ToI/player/7.png"; // @ts-ignore
-import ToI_player8 from "../static/players/ToI/player/8.png"; // @ts-ignore
-import ToI_player9 from "../static/players/ToI/player/9.png"; // @ts-ignore
-import ToI_player10 from "../static/players/ToI/player/10.png"; // @ts-ignore
-import ToI_player11 from "../static/players/ToI/player/11.png"; // @ts-ignore
-import ToI_player12 from "../static/players/ToI/player/12.png"; // @ts-ignore
-import ToI_player13 from "../static/players/ToI/player/13.png"; // @ts-ignore
-import ToI_player14 from "../static/players/ToI/player/14.png"; // @ts-ignore
-import ToI_player15 from "../static/players/ToI/player/15.png"; // @ts-ignore
-import ToI_player16 from "../static/players/ToI/player/16.png"; // @ts-ignore
-import ToI_player17 from "../static/players/ToI/player/17.png"; // @ts-ignore
-import ToI_player18 from "../static/players/ToI/player/18.png"; // @ts-ignore
-import ToI_player19 from "../static/players/ToI/player/19.png"; // @ts-ignore
-import ToI_player20 from "../static/players/ToI/player/20.png"; // @ts-ignore
-import ToI_player21 from "../static/players/ToI/player/21.png"; // @ts-ignore
-import ToI_player22 from "../static/players/ToI/player/22.png"; // @ts-ignore
-import ToI_player23 from "../static/players/ToI/player/23.png"; // @ts-ignore
-
-import ToU_player0 from "../static/players/ToU/player/0.png"; // @ts-ignore
-import ToU_player1 from "../static/players/ToU/player/1.png"; // @ts-ignore
-import ToU_player2 from "../static/players/ToU/player/2.png"; // @ts-ignore
-import ToU_player3 from "../static/players/ToU/player/3.png"; // @ts-ignore
-import ToU_player4 from "../static/players/ToU/player/4.png"; // @ts-ignore
-import ToU_player5 from "../static/players/ToU/player/5.png"; // @ts-ignore
-import ToU_player6 from "../static/players/ToU/player/6.png"; // @ts-ignore
-import ToU_player7 from "../static/players/ToU/player/7.png"; // @ts-ignore
-import ToU_player8 from "../static/players/ToU/player/8.png"; // @ts-ignore
-import ToU_player9 from "../static/players/ToU/player/9.png"; // @ts-ignore
-import ToU_player10 from "../static/players/ToU/player/10.png"; // @ts-ignore
-import ToU_player11 from "../static/players/ToU/player/11.png"; // @ts-ignore
-import ToU_player12 from "../static/players/ToU/player/12.png"; // @ts-ignore
-import ToU_player13 from "../static/players/ToU/player/13.png"; // @ts-ignore
-import ToU_player14 from "../static/players/ToU/player/14.png"; // @ts-ignore
-import ToU_player15 from "../static/players/ToU/player/15.png"; // @ts-ignore
-import ToU_player16 from "../static/players/ToU/player/16.png"; // @ts-ignore
-import ToU_player17 from "../static/players/ToU/player/17.png"; // @ts-ignore
-import ToU_player18 from "../static/players/ToU/player/18.png"; // @ts-ignore
-import ToU_player19 from "../static/players/ToU/player/19.png"; // @ts-ignore
-
-import OtherRoles_player0 from "../static/players/OtherRoles/player/0.png"; // @ts-ignore
-import OtherRoles_player1 from "../static/players/OtherRoles/player/1.png"; // @ts-ignore
-import OtherRoles_player2 from "../static/players/OtherRoles/player/2.png"; // @ts-ignore
-import OtherRoles_player3 from "../static/players/OtherRoles/player/3.png"; // @ts-ignore
-import OtherRoles_player4 from "../static/players/OtherRoles/player/4.png"; // @ts-ignore
-import OtherRoles_player5 from "../static/players/OtherRoles/player/5.png"; // @ts-ignore
-import OtherRoles_player6 from "../static/players/OtherRoles/player/6.png"; // @ts-ignore
-import OtherRoles_player7 from "../static/players/OtherRoles/player/7.png"; // @ts-ignore
-import OtherRoles_player8 from "../static/players/OtherRoles/player/8.png"; // @ts-ignore
-import OtherRoles_player9 from "../static/players/OtherRoles/player/9.png"; // @ts-ignore
-import OtherRoles_player10 from "../static/players/OtherRoles/player/10.png"; // @ts-ignore
-import OtherRoles_player11 from "../static/players/OtherRoles/player/11.png"; // @ts-ignore
-import OtherRoles_player12 from "../static/players/OtherRoles/player/12.png"; // @ts-ignore
-import OtherRoles_player13 from "../static/players/OtherRoles/player/13.png"; // @ts-ignore
-import OtherRoles_player14 from "../static/players/OtherRoles/player/14.png"; // @ts-ignore
-import OtherRoles_player15 from "../static/players/OtherRoles/player/15.png"; // @ts-ignore
-import OtherRoles_player16 from "../static/players/OtherRoles/player/16.png"; // @ts-ignore
-import OtherRoles_player17 from "../static/players/OtherRoles/player/17.png"; // @ts-ignore
-import OtherRoles_player18 from "../static/players/OtherRoles/player/18.png"; // @ts-ignore
-import OtherRoles_player19 from "../static/players/OtherRoles/player/19.png"; // @ts-ignore
-import OtherRoles_player20 from "../static/players/OtherRoles/player/20.png"; // @ts-ignore
-import OtherRoles_player21 from "../static/players/OtherRoles/player/21.png"; // @ts-ignore
-import OtherRoles_player22 from "../static/players/OtherRoles/player/22.png"; // @ts-ignore
-import OtherRoles_player23 from "../static/players/OtherRoles/player/23.png"; // @ts-ignore
-import OtherRoles_player24 from "../static/players/OtherRoles/player/24.png"; // @ts-ignore
-import OtherRoles_player25 from "../static/players/OtherRoles/player/25.png"; // @ts-ignore
-import OtherRoles_player26 from "../static/players/OtherRoles/player/26.png"; // @ts-ignore
-import OtherRoles_player27 from "../static/players/OtherRoles/player/27.png"; // @ts-ignore
-import OtherRoles_player28 from "../static/players/OtherRoles/player/28.png"; // @ts-ignore
-import OtherRoles_player29 from "../static/players/OtherRoles/player/29.png"; // @ts-ignore
-
-// @ts-ignore
-import none_ghost0 from "../static/players/none/ghost/0.png"; // @ts-ignore
-import none_ghost1 from "../static/players/none/ghost/1.png"; // @ts-ignore
-import none_ghost2 from "../static/players/none/ghost/2.png"; // @ts-ignore
-import none_ghost3 from "../static/players/none/ghost/3.png"; // @ts-ignore
-import none_ghost4 from "../static/players/none/ghost/4.png"; // @ts-ignore
-import none_ghost5 from "../static/players/none/ghost/5.png"; // @ts-ignore
-import none_ghost6 from "../static/players/none/ghost/6.png"; // @ts-ignore
-import none_ghost7 from "../static/players/none/ghost/7.png"; // @ts-ignore
-import none_ghost8 from "../static/players/none/ghost/8.png"; // @ts-ignore
-import none_ghost9 from "../static/players/none/ghost/9.png"; // @ts-ignore
-import none_ghost10 from "../static/players/none/ghost/10.png"; // @ts-ignore
-import none_ghost11 from "../static/players/none/ghost/11.png"; // @ts-ignore
-
-import ToI_ghost0 from "../static/players/ToI/ghost/0.png"; // @ts-ignore
-import ToI_ghost1 from "../static/players/ToI/ghost/1.png"; // @ts-ignore
-import ToI_ghost2 from "../static/players/ToI/ghost/2.png"; // @ts-ignore
-import ToI_ghost3 from "../static/players/ToI/ghost/3.png"; // @ts-ignore
-import ToI_ghost4 from "../static/players/ToI/ghost/4.png"; // @ts-ignore
-import ToI_ghost5 from "../static/players/ToI/ghost/5.png"; // @ts-ignore
-import ToI_ghost6 from "../static/players/ToI/ghost/6.png"; // @ts-ignore
-import ToI_ghost7 from "../static/players/ToI/ghost/7.png"; // @ts-ignore
-import ToI_ghost8 from "../static/players/ToI/ghost/8.png"; // @ts-ignore
-import ToI_ghost9 from "../static/players/ToI/ghost/9.png"; // @ts-ignore
-import ToI_ghost10 from "../static/players/ToI/ghost/10.png"; // @ts-ignore
-import ToI_ghost11 from "../static/players/ToI/ghost/11.png"; // @ts-ignore
-import ToI_ghost12 from "../static/players/ToI/ghost/12.png"; // @ts-ignore
-import ToI_ghost13 from "../static/players/ToI/ghost/13.png"; // @ts-ignore
-import ToI_ghost14 from "../static/players/ToI/ghost/14.png"; // @ts-ignore
-import ToI_ghost15 from "../static/players/ToI/ghost/15.png"; // @ts-ignore
-import ToI_ghost16 from "../static/players/ToI/ghost/16.png"; // @ts-ignore
-import ToI_ghost17 from "../static/players/ToI/ghost/17.png"; // @ts-ignore
-import ToI_ghost18 from "../static/players/ToI/ghost/18.png"; // @ts-ignore
-import ToI_ghost19 from "../static/players/ToI/ghost/19.png"; // @ts-ignore
-import ToI_ghost20 from "../static/players/ToI/ghost/20.png"; // @ts-ignore
-import ToI_ghost21 from "../static/players/ToI/ghost/21.png"; // @ts-ignore
-import ToI_ghost22 from "../static/players/ToI/ghost/22.png"; // @ts-ignore
-import ToI_ghost23 from "../static/players/ToI/ghost/23.png"; // @ts-ignore
-
-import ToU_ghost0 from "../static/players/ToU/ghost/0.png"; // @ts-ignore
-import ToU_ghost1 from "../static/players/ToU/ghost/1.png"; // @ts-ignore
-import ToU_ghost2 from "../static/players/ToU/ghost/2.png"; // @ts-ignore
-import ToU_ghost3 from "../static/players/ToU/ghost/3.png"; // @ts-ignore
-import ToU_ghost4 from "../static/players/ToU/ghost/4.png"; // @ts-ignore
-import ToU_ghost5 from "../static/players/ToU/ghost/5.png"; // @ts-ignore
-import ToU_ghost6 from "../static/players/ToU/ghost/6.png"; // @ts-ignore
-import ToU_ghost7 from "../static/players/ToU/ghost/7.png"; // @ts-ignore
-import ToU_ghost8 from "../static/players/ToU/ghost/8.png"; // @ts-ignore
-import ToU_ghost9 from "../static/players/ToU/ghost/9.png"; // @ts-ignore
-import ToU_ghost10 from "../static/players/ToU/ghost/10.png"; // @ts-ignore
-import ToU_ghost11 from "../static/players/ToU/ghost/11.png"; // @ts-ignore
-import ToU_ghost12 from "../static/players/ToU/ghost/12.png"; // @ts-ignore
-import ToU_ghost13 from "../static/players/ToU/ghost/13.png"; // @ts-ignore
-import ToU_ghost14 from "../static/players/ToU/ghost/14.png"; // @ts-ignore
-import ToU_ghost15 from "../static/players/ToU/ghost/15.png"; // @ts-ignore
-import ToU_ghost16 from "../static/players/ToU/ghost/16.png"; // @ts-ignore
-import ToU_ghost17 from "../static/players/ToU/ghost/17.png"; // @ts-ignore
-import ToU_ghost18 from "../static/players/ToU/ghost/18.png"; // @ts-ignore
-import ToU_ghost19 from "../static/players/ToU/ghost/19.png"; // @ts-ignore
-
-import OtherRoles_ghost0 from "../static/players/OtherRoles/ghost/0.png"; // @ts-ignore
-import OtherRoles_ghost1 from "../static/players/OtherRoles/ghost/1.png"; // @ts-ignore
-import OtherRoles_ghost2 from "../static/players/OtherRoles/ghost/2.png"; // @ts-ignore
-import OtherRoles_ghost3 from "../static/players/OtherRoles/ghost/3.png"; // @ts-ignore
-import OtherRoles_ghost4 from "../static/players/OtherRoles/ghost/4.png"; // @ts-ignore
-import OtherRoles_ghost5 from "../static/players/OtherRoles/ghost/5.png"; // @ts-ignore
-import OtherRoles_ghost6 from "../static/players/OtherRoles/ghost/6.png"; // @ts-ignore
-import OtherRoles_ghost7 from "../static/players/OtherRoles/ghost/7.png"; // @ts-ignore
-import OtherRoles_ghost8 from "../static/players/OtherRoles/ghost/8.png"; // @ts-ignore
-import OtherRoles_ghost9 from "../static/players/OtherRoles/ghost/9.png"; // @ts-ignore
-import OtherRoles_ghost10 from "../static/players/OtherRoles/ghost/10.png"; // @ts-ignore
-import OtherRoles_ghost11 from "../static/players/OtherRoles/ghost/11.png"; // @ts-ignore
-import OtherRoles_ghost12 from "../static/players/OtherRoles/ghost/12.png"; // @ts-ignore
-import OtherRoles_ghost13 from "../static/players/OtherRoles/ghost/13.png"; // @ts-ignore
-import OtherRoles_ghost14 from "../static/players/OtherRoles/ghost/14.png"; // @ts-ignore
-import OtherRoles_ghost15 from "../static/players/OtherRoles/ghost/15.png"; // @ts-ignore
-import OtherRoles_ghost16 from "../static/players/OtherRoles/ghost/16.png"; // @ts-ignore
-import OtherRoles_ghost17 from "../static/players/OtherRoles/ghost/17.png"; // @ts-ignore
-import OtherRoles_ghost18 from "../static/players/OtherRoles/ghost/18.png"; // @ts-ignore
-import OtherRoles_ghost19 from "../static/players/OtherRoles/ghost/19.png"; // @ts-ignore
-import OtherRoles_ghost20 from "../static/players/OtherRoles/ghost/20.png"; // @ts-ignore
-import OtherRoles_ghost21 from "../static/players/OtherRoles/ghost/21.png"; // @ts-ignore
-import OtherRoles_ghost22 from "../static/players/OtherRoles/ghost/22.png"; // @ts-ignore
-import OtherRoles_ghost23 from "../static/players/OtherRoles/ghost/23.png"; // @ts-ignore
-import OtherRoles_ghost24 from "../static/players/OtherRoles/ghost/24.png"; // @ts-ignore
-import OtherRoles_ghost25 from "../static/players/OtherRoles/ghost/25.png"; // @ts-ignore
-import OtherRoles_ghost26 from "../static/players/OtherRoles/ghost/26.png"; // @ts-ignore
-import OtherRoles_ghost27 from "../static/players/OtherRoles/ghost/27.png"; // @ts-ignore
-import OtherRoles_ghost28 from "../static/players/OtherRoles/ghost/28.png"; // @ts-ignore
-import OtherRoles_ghost29 from "../static/players/OtherRoles/ghost/29.png"; // @ts-ignore
-import { MODS } from "./ISettings";
 
 export const players = {
   NONE: {
@@ -758,7 +760,7 @@ export const players = {
       ToU_ghost19,
     ],
   },
-  OTHER_ROLES: {
+  THE_OTHER_ROLES: {
     alive: [
       OtherRoles_player0,
       OtherRoles_player1,
