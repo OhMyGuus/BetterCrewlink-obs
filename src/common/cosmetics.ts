@@ -88,6 +88,12 @@ import hat77_8 from "../static/hats/77-8.png"; // @ts-ignore
 import hat77_9 from "../static/hats/77-9.png"; // @ts-ignore
 import hat77_10 from "../static/hats/77-10.png"; // @ts-ignore
 import hat77_11 from "../static/hats/77-11.png"; // @ts-ignore
+import hat77_12 from "../static/hats/77-12.png"; // @ts-ignore
+import hat77_13 from "../static/hats/77-13.png"; // @ts-ignore
+import hat77_14 from "../static/hats/77-14.png"; // @ts-ignore
+import hat77_15 from "../static/hats/77-15.png"; // @ts-ignore
+import hat77_16 from "../static/hats/77-16.png"; // @ts-ignore
+import hat77_17 from "../static/hats/77-17.png"; // @ts-ignore
 
 import hat78 from "../static/hats/78.png"; // @ts-ignore
 import hat79 from "../static/hats/79.png"; // @ts-ignore
@@ -114,6 +120,13 @@ import hat90_8 from "../static/hats/90-8.png"; // @ts-ignore
 import hat90_9 from "../static/hats/90-9.png"; // @ts-ignore
 import hat90_10 from "../static/hats/90-10.png"; // @ts-ignore
 import hat90_11 from "../static/hats/90-11.png"; // @ts-ignore
+import hat90_12 from "../static/hats/90-12.png"; // @ts-ignore
+import hat90_13 from "../static/hats/90-13.png"; // @ts-ignore
+import hat90_14 from "../static/hats/90-14.png"; // @ts-ignore
+import hat90_15 from "../static/hats/90-15.png"; // @ts-ignore
+import hat90_16 from "../static/hats/90-16.png"; // @ts-ignore
+import hat90_17 from "../static/hats/90-17.png"; // @ts-ignore
+
 import hat91 from "../static/hats/91.png"; // @ts-ignore
 import hat92 from "../static/hats/92.png"; // @ts-ignore
 import hat93 from "../static/hats/93.png"; // @ts-ignore
@@ -173,6 +186,12 @@ import none_player8 from "../static/players/none/player/8.png"; // @ts-ignore
 import none_player9 from "../static/players/none/player/9.png"; // @ts-ignore
 import none_player10 from "../static/players/none/player/10.png"; // @ts-ignore
 import none_player11 from "../static/players/none/player/11.png"; // @ts-ignore
+import none_player12 from "../static/players/none/player/12.png"; // @ts-ignore
+import none_player13 from "../static/players/none/player/13.png"; // @ts-ignore
+import none_player14 from "../static/players/none/player/14.png"; // @ts-ignore
+import none_player15 from "../static/players/none/player/15.png"; // @ts-ignore
+import none_player16 from "../static/players/none/player/16.png"; // @ts-ignore
+import none_player17 from "../static/players/none/player/17.png"; // @ts-ignore
 
 import ToI_player0 from "../static/players/ToI/player/0.png"; // @ts-ignore
 import ToI_player1 from "../static/players/ToI/player/1.png"; // @ts-ignore
@@ -264,6 +283,12 @@ import none_ghost8 from "../static/players/none/ghost/8.png"; // @ts-ignore
 import none_ghost9 from "../static/players/none/ghost/9.png"; // @ts-ignore
 import none_ghost10 from "../static/players/none/ghost/10.png"; // @ts-ignore
 import none_ghost11 from "../static/players/none/ghost/11.png"; // @ts-ignore
+import none_ghost12 from "../static/players/none/ghost/12.png"; // @ts-ignore
+import none_ghost13 from "../static/players/none/ghost/13.png"; // @ts-ignore
+import none_ghost14 from "../static/players/none/ghost/14.png"; // @ts-ignore
+import none_ghost15 from "../static/players/none/ghost/15.png"; // @ts-ignore
+import none_ghost16 from "../static/players/none/ghost/16.png"; // @ts-ignore
+import none_ghost17 from "../static/players/none/ghost/17.png"; // @ts-ignore
 
 import ToI_ghost0 from "../static/players/ToI/ghost/0.png"; // @ts-ignore
 import ToI_ghost1 from "../static/players/ToI/ghost/1.png"; // @ts-ignore
@@ -397,6 +422,12 @@ export const coloredHats: { [key in string]: string | undefined } = {
   77_9: hat77_9,
   77_10: hat77_10,
   77_11: hat77_11,
+  77_12: hat77_12,
+  77_13: hat77_13,
+  77_14: hat77_14,
+  77_15: hat77_15,
+  77_16: hat77_16,
+  77_17: hat77_17,
 
   90_0: hat90_0,
   90_1: hat90_1,
@@ -410,7 +441,13 @@ export const coloredHats: { [key in string]: string | undefined } = {
   90_9: hat90_9,
   90_10: hat90_10,
   90_11: hat90_11,
-};
+  90_12: hat90_12,
+  90_13: hat90_13,
+  90_14: hat90_14,
+  90_15: hat90_15,
+  90_16: hat90_16,
+  90_17: hat90_17,
+}
 
 export const hats = [
   undefined,
@@ -532,18 +569,24 @@ export const hats = [
 
 export const playerColors = {
   NONE: [
-    ["#C51111", "#7A0838"],
-    ["#132ED1", "#09158E"],
-    ["#117F2D", "#0A4D2E"],
-    ["#ED54BA", "#AB2BAD"],
-    ["#EF7D0D", "#B33E15"],
-    ["#F5F557", "#C38823"],
-    ["#3F474E", "#1E1F26"],
-    ["#8394BF", "#8394BF"],
-    ["#6B2FBB", "#3B177C"],
-    ["#71491E", "#5E2615"],
-    ["#38FEDC", "#24A8BE"],
-    ["#50EF39", "#15A742"],
+    ["#c61111", "#7a0838"],
+    ["#132ed2", "#09158e"],
+    ["#11802d", "#0a4d2e"],
+    ["#ee54bb", "#ac2bae"],
+    ["#f07d0d", "#b43e15"],
+    ["#f6f657", "#c38822"],
+    ["#3f474e", "#1e1f26"],
+    ["#d7e1f1", "#8495c0"],
+    ["#6b2fbc", "#3b177c"],
+    ["#71491e", "#5e2615"],
+    ["#38ffdd", "#24a9bf"],
+    ["#50f039", "#15a842"],
+    ["#5f1d2e", "#410f1a"],
+    ["#ecc0d3", "#de92b3"],
+    ["#f0e7a8", "#d2bc89"],
+    ["#758593", "#465664"],
+    ["#918877", "#51413e"],
+    ["#d76464", "#b44362"],
   ],
   TOWN_OF_US: [
     ["#c61111", "#7a0838"],
@@ -868,8 +911,8 @@ function getModHat(color: number, id = -1, mod: string) {
   return hat
     ? `${MODHATS_BASE}/${mod}/${multiColor}${hat}`
     : hats[id]
-    ? hats[id]
-    : undefined;
+      ? hats[id]
+      : undefined;
 }
 
 export interface HatDementions {

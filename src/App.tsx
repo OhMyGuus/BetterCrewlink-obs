@@ -9,7 +9,9 @@ import { Console } from "console";
 import { playerColors } from "./common/cosmetics";
 
 interface UseStylesProps {
-  hudHeight: number;
+  height: number;
+  width: number;
+  oldHud: boolean;
 }
 
 interface signalData {
@@ -19,33 +21,31 @@ interface signalData {
 
 const useStyles = makeStyles(() => ({
   meetingHud: {
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    width: ({ width }: UseStylesProps) => width,
+    height: ({ height }: UseStylesProps) => height,
+    transform: 'translate(-50%, -50%)',
   },
-  playerIcons: {
-    width: "83.45%",
-    height: "63.2%",
-    left: "5%",
-    top: "18.4703%",
-    position: "absolute",
-    display: "flex",
-    "&>*:nth-child(odd)": {
-      marginRight: "1.4885%",
-    },
-    "&>*:nth-child(even)": {
-      marginLeft: "1.4885%",
-    },
-    flexWrap: "wrap",
+  tabletContainer: {
+    width: ({ oldHud }: UseStylesProps) => (oldHud ? '88.45%' : '100%'),
+    height: '10.5%',
+    left: ({ oldHud }: UseStylesProps) => (oldHud ? '4.7%' : '0.4%'),
+    top: ({ oldHud }: UseStylesProps) => (oldHud ? '18.4703%' : '15%'),
+    position: 'absolute',
+    display: 'flex',
+    flexWrap: 'wrap',
   },
-  icon: {
-    width: "48.51%",
-    height: "16.49%",
-    borderRadius: ({ hudHeight }: UseStylesProps) => hudHeight / 100,
-    transition: "opacity .1s linear",
-    marginBottom: "2.25%",
-    boxSizing: "border-box",
+  playerContainer: {
+    width: ({ oldHud }: UseStylesProps) => (oldHud ? '46.41%' : '30%'),
+    height: ({ oldHud }: UseStylesProps) => (oldHud ? '100%' : '109%'),
+    borderRadius: ({ height }: UseStylesProps) => height / 100,
+    transition: 'opacity .1s linear',
+    marginBottom: ({ oldHud }: UseStylesProps) => (oldHud ? '2%' : '1.9%'),
+    marginRight: ({ oldHud }: UseStylesProps) => (oldHud ? '2.34%' : '0.23%'),
+    marginLeft: ({ oldHud }: UseStylesProps) => (oldHud ? '0%' : '2.4%'),
+    boxSizing: 'border-box',
   },
 }));
 
@@ -146,7 +146,7 @@ const App: React.FC = function () {
       <>
         <h2 style={{ color: "black" }}>
           Hey, it seems that u didn't use the url from Bettercrewlink
-        </h2>
+          </h2>
       </>
     );
   }
@@ -274,34 +274,28 @@ const AvatarOverlay: React.FC<AvatarOverlayProps> = ({
       <div key={player.id} className="player_wrapper">
         <div>
           <Avatar
-            mod={mod}
             key={player.id}
             // connectionState={!connected ? 'disconnected' : audio ? 'connected' : 'novoice'}
             player={player}
             showborder={isOnSide && !compactOverlay}
-            connectionState={"connected"}
+            muted={player.isLocal}
+            deafened={player.isLocal}
+            connectionState={'connected'}
             talking={talking}
             borderColor="#2ecc71"
-            isAlive={
-              !voiceState.otherDead[player.clientId] ||
-              (player.isLocal && !player.isDead)
-            }
+            isAlive={!voiceState.otherDead[player.clientId] || (player.isLocal && !player.isDead)}
             size={100}
-            lookLeft={
-              !(positionParse === "left" || positionParse === "bottom_left")
-            }
+            lookLeft={!(positionParse === 'left' || positionParse === 'bottom_left')}
             overflow={isOnSide && !showName}
             showHat={true}
+            mod={voiceState.mod}
           />
         </div>
         {showName && (
           <span
             className="playername"
             style={{
-              opacity:
-                (position === "right1" || position === "left1") && !talking
-                  ? 0
-                  : 1,
+              opacity: (position === 'right1' || position === 'left1') && !talking ? 0 : 1,
             }}
           >
             <small>{player.name}</small>
@@ -333,18 +327,30 @@ const MeetingHud: React.FC<MeetingHudProps> = ({
   gameState,
   colors,
 }: MeetingHudProps) => {
-  const [width, height] = useWindowSize();
+  const [windowWidth, windowheight] = useWindowSize();
+	const [width, height] = useMemo(() => {
+		let resultW;
+		let ratio_diff = Math.abs(windowWidth / windowheight - 1.7);
 
-  let hudWidth = 0,
-    hudHeight = 0;
-  if (width / (height * 0.96) > iPadRatio) {
-    hudHeight = height * 0.96;
-    hudWidth = hudHeight * iPadRatio;
-  } else {
-    hudWidth = width;
-    hudHeight = width * (1 / iPadRatio);
-  }
-  const classes = useStyles({ hudHeight });
+		if (ratio_diff < 0.25) {
+			resultW = windowWidth / 1.192
+		} else if (ratio_diff < 0.5) {
+			resultW = windowWidth / 1.146
+		} else {
+			resultW = windowWidth / 1.591;
+		}
+
+		let resultH = resultW / 1.72;
+		// console.log("Ratio: ", windowWidth, windowheight, ratio.toFixed(1), ratio, Math.round(ratio * 10) / 10, Math.abs(ratio - 1.7))
+		return [resultW, resultH];
+	}, [windowWidth, windowheight]);
+
+	const classes = useStyles({
+		width: width,
+		height: height,
+		oldHud: false
+	});
+  
   const players = useMemo(() => {
     if (!gameState.players) return null;
     return gameState.players.slice().sort((a, b) => {
@@ -358,46 +364,33 @@ const MeetingHud: React.FC<MeetingHudProps> = ({
       return a.id - b.id;
     });
   }, [gameState.gameState]);
+
   if (!players || gameState.gameState !== GameState.DISCUSSION) return null;
   const overlays = players.map((player) => {
+    const color = colors[player.colorId] ? colors[player.colorId][0] : '#C51111';
+
     return (
       <div
         key={player.id}
-        className={classes.icon}
+        className={classes.playerContainer}
         style={{
-          opacity:
-            voiceState.otherTalking[player.clientId] ||
-            (player.isLocal && voiceState.localTalking)
-              ? 1
-              : 0,
-          boxShadow: `0 0 ${hudHeight / 100}px ${hudHeight / 100}px ${
-            colors[player.colorId] ? colors[player.colorId][0] : "#C51111"
-          }`,
+          opacity: voiceState.otherTalking[player.clientId] || (player.isLocal && voiceState.localTalking) ? 1 : 0,
+          border: 'solid',
+          borderWidth: '2px',
+          borderColor: '#00000037',
+          boxShadow: `0 0 ${height / 100}px ${height / 100}px ${color}`,
+          transition: 'opacity 400ms',
         }}
       />
     );
   });
 
-  while (overlays.length < 10) {
-    overlays.push(
-      <div
-        key={`spacer-${overlays.length}`}
-        className={classes.icon}
-        style={{
-          opacity: 0,
-        }}
-      />
-    );
-  }
-
   return (
-    <div
-      className={classes.meetingHud}
-      style={{ width: hudWidth, height: hudHeight }}
-    >
-      <div className={classes.playerIcons}>{overlays}</div>
+    <div className={classes.meetingHud}>
+      <div className={classes.tabletContainer}>{overlays}</div>
     </div>
-  );
+  ); 
+
 };
 
 export default App;
