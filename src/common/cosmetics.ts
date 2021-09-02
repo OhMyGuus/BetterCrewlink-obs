@@ -172,7 +172,6 @@ import skin16 from "../static/skins/16.png"; // @ts-ignore
 import skin17 from "../static/skins/17.png"; // @ts-ignore
 import skin18 from "../static/skins/18.png"; // @ts-ignore
 
-
 // @ts-ignore
 import none_player0 from "../static/players/none/player/0.png"; // @ts-ignore
 import none_player1 from "../static/players/none/player/1.png"; // @ts-ignore
@@ -238,6 +237,13 @@ import ToU_player16 from "../static/players/ToU/player/16.png"; // @ts-ignore
 import ToU_player17 from "../static/players/ToU/player/17.png"; // @ts-ignore
 import ToU_player18 from "../static/players/ToU/player/18.png"; // @ts-ignore
 import ToU_player19 from "../static/players/ToU/player/19.png"; // @ts-ignore
+import ToU_player20 from "../static/players/ToU/player/20.png"; // @ts-ignore
+import ToU_player21 from "../static/players/ToU/player/21.png"; // @ts-ignore
+import ToU_player22 from "../static/players/ToU/player/22.png"; // @ts-ignore
+import ToU_player23 from "../static/players/ToU/player/23.png"; // @ts-ignore
+import ToU_player24 from "../static/players/ToU/player/24.png"; // @ts-ignore
+import ToU_player25 from "../static/players/ToU/player/25.png"; // @ts-ignore
+import ToU_player26 from "../static/players/ToU/player/26.png"; // @ts-ignore
 
 import OtherRoles_player0 from "../static/players/OtherRoles/player/0.png"; // @ts-ignore
 import OtherRoles_player1 from "../static/players/OtherRoles/player/1.png"; // @ts-ignore
@@ -335,6 +341,13 @@ import ToU_ghost16 from "../static/players/ToU/ghost/16.png"; // @ts-ignore
 import ToU_ghost17 from "../static/players/ToU/ghost/17.png"; // @ts-ignore
 import ToU_ghost18 from "../static/players/ToU/ghost/18.png"; // @ts-ignore
 import ToU_ghost19 from "../static/players/ToU/ghost/19.png"; // @ts-ignore
+import ToU_ghost20 from "../static/players/ToU/ghost/20.png"; // @ts-ignore
+import ToU_ghost21 from "../static/players/ToU/ghost/21.png"; // @ts-ignore
+import ToU_ghost22 from "../static/players/ToU/ghost/22.png"; // @ts-ignore
+import ToU_ghost23 from "../static/players/ToU/ghost/23.png"; // @ts-ignore
+import ToU_ghost24 from "../static/players/ToU/ghost/24.png"; // @ts-ignore
+import ToU_ghost25 from "../static/players/ToU/ghost/25.png"; // @ts-ignore
+import ToU_ghost26 from "../static/players/ToU/ghost/26.png"; // @ts-ignore
 
 import OtherRoles_ghost0 from "../static/players/OtherRoles/ghost/0.png"; // @ts-ignore
 import OtherRoles_ghost1 from "../static/players/OtherRoles/ghost/1.png"; // @ts-ignore
@@ -447,7 +460,7 @@ export const coloredHats: { [key in string]: string | undefined } = {
   90_15: hat90_15,
   90_16: hat90_16,
   90_17: hat90_17,
-}
+};
 
 export const hats = [
   undefined,
@@ -601,6 +614,12 @@ export const playerColors = {
     ["#71491e", "#5e2615"],
     ["#38ffdd", "#24a9bf"],
     ["#50f039", "#15a842"],
+    ["#5f1d2e", "#410f1a"],
+    ["#ecc0d3", "#de92b3"],
+    ["#f0e7a8", "#d2bc89"],
+    ["#758593", "#465664"],
+    ["#918877", "#51413e"],
+    ["#d76464", "#b44362"],
     ["#a8323e", "#651e25"],
     ["#3c302c", "#1e1816"],
     ["#3d81ff", "#1f4180"],
@@ -609,6 +628,7 @@ export const playerColors = {
     ["#3dffb5", "#1f805b"],
     ["#baa1ff", "#5d5180"],
     ["#000000", "#000000"],
+    ["#01a6ff", "#116897"],
   ],
   TOWN_OF_IMPOSTORS: [
     ["#c61111", "#7a0838"],
@@ -669,7 +689,6 @@ export const playerColors = {
     ["#a8dfff", "#599fc8"],
   ],
 };
-
 
 export const players = {
   NONE: {
@@ -791,6 +810,13 @@ export const players = {
       ToU_player17,
       ToU_player18,
       ToU_player19,
+      ToU_player20,
+      ToU_player21,
+      ToU_player22,
+      ToU_player23,
+      ToU_player24,
+      ToU_player25,
+      ToU_player26,
     ],
     dead: [
       ToU_ghost0,
@@ -813,6 +839,13 @@ export const players = {
       ToU_ghost17,
       ToU_ghost18,
       ToU_ghost19,
+      ToU_ghost20,
+      ToU_ghost21,
+      ToU_ghost22,
+      ToU_ghost23,
+      ToU_ghost24,
+      ToU_ghost25,
+      ToU_ghost26,
     ],
   },
   THE_OTHER_ROLES: {
@@ -923,8 +956,8 @@ function getModHat(color: number, id = -1, mod: string) {
   return hat
     ? `${MODHATS_BASE}/${mod}/${multiColor}${hat}`
     : hats[id]
-      ? hats[id]
-      : undefined;
+    ? hats[id]
+    : undefined;
 }
 
 export interface HatDementions {
@@ -967,5 +1000,7 @@ export function getCosmetic(
   if (type === cosmeticType.hat && mod !== "NONE") {
     return getModHat(color, id, mod);
   }
-  return type === cosmeticType.hat ? coloredHats[`${id}${color}`] || hats[id] : skins[id];
+  return type === cosmeticType.hat
+    ? coloredHats[`${id}${color}`] || hats[id]
+    : skins[id];
 }

@@ -215,7 +215,7 @@ function Canvas({
             }}
           />
           <img
-            src={getCosmetic(color, isAlive, cosmeticType.skin, hat, mod)}
+            src={getCosmetic(color, isAlive, cosmeticType.skin, skin, mod)}
             ref={skinImg}
             style={{ top: skin === 17 ? "0%" : undefined }}
             className={classes.skin}
