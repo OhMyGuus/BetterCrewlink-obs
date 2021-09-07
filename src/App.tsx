@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState,CSSProperties  } from "react";
 import { GameState, VoiceState, OverlayState } from "./common/AmongUsState";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import "./App.css";
@@ -7,6 +7,10 @@ import { ISettings, MODS } from "./common/ISettings";
 import io from "socket.io-client";
 import { Console } from "console";
 import { playerColors } from "./common/cosmetics";
+
+export interface playerContainerCss extends CSSProperties {
+  '--size': string;
+}
 
 interface UseStylesProps {
   height: number;
@@ -307,9 +311,9 @@ const AvatarOverlay: React.FC<AvatarOverlayProps> = ({
   if (avatars.length === 0) return null;
   return (
     <div>
-      <div className={classnames.join(" ")}>
+      <div className={classnames.join(" ")} style={{ '--size' :  7.5 * (10 / avatars.length) + "vh" } as playerContainerCss}>
         <div className="otherplayers">
-          <div className="players_container playerContainerBack">{avatars}</div>
+          <div className="players_container playerContainerBack">{avatars}</div> 
         </div>
       </div>
     </div>
