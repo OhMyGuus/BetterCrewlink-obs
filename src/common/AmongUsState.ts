@@ -1,5 +1,3 @@
-import { MODS } from "./ISettings";
-
 export interface OverlayState {
 	gameState: GameState;
 	players: overlayPlayer[];
@@ -10,16 +8,19 @@ export interface overlayPlayer {
 	id: number;
 	clientId: number;
 	inVent: boolean;
-	isDead:boolean;
+	isDead: boolean;
 	name: string;
 	colorId: number;
-	hatId: number;
-	petId: number;
-	skinId: number;
+	hatId: string;
+	petId: string;
+	skinId: string;
+	visorId: string;
 	disconnected: boolean;
 	isLocal: boolean;
 	bugged: boolean;
 	connected: boolean;
+	realColor: string[];
+	shiftedColor: number;
 }
 
 export enum GameState {
@@ -41,5 +42,15 @@ export interface VoiceState {
 	otherDead: OtherTalking;
 	localTalking: boolean;
 	localIsAlive: boolean;
-	mod: MODS;
+	mod: ModsType;
 }
+
+
+export type ModsType =
+	| 'NONE'
+	| 'TOWN_OF_IMPOSTORS'
+	| 'TOWN_OF_US'
+	| 'THE_OTHER_ROLES'
+	| 'EXTRA_ROLES'
+	| 'POLUS_GG'
+	| 'OTHER';

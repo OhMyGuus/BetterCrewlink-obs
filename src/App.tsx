@@ -1,12 +1,10 @@
-import React, { useEffect, useMemo, useRef, useState,CSSProperties  } from "react";
-import { GameState, VoiceState, OverlayState } from "./common/AmongUsState";
+import React, { useEffect, useMemo, useState,CSSProperties  } from "react";
+import { GameState, VoiceState, OverlayState, ModsType } from "./common/AmongUsState";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import "./App.css";
 import Avatar from "./Avatar";
-import { ISettings, MODS } from "./common/ISettings";
+import { ISettings } from "./common/ISettings";
 import io from "socket.io-client";
-import { Console } from "console";
-import { playerColors } from "./common/cosmetics";
 
 export interface playerContainerCss extends CSSProperties {
   '--size': string;
@@ -92,7 +90,6 @@ const App: React.FC = function () {
     secretString: undefined
   });
 
-  const supportedmods = ["NONE", "TOWN_OF_IMPOSTORS", "TOWN_OF_US", "OTHER_ROLES"];
   //   const socketRef = useRef<Socket | undefined>(undefined);
   useEffect(() => {
     let server = query.get("server");
@@ -105,12 +102,10 @@ const App: React.FC = function () {
       meetingOverlay: query.get("meeting") === "1",
       serverURL: server || "https://bettercrewl.ink",
       secretString: query.get("secret") || undefined,
-      mod: supportedmods.includes(query.get("mod") ?? "")
-        ? (query.get("mod") as "NONE" | "TOWN_OF_IMPOSTORS" | "TOWN_OF_US")
-        : "NONE",
+      mod: query.get("mod") ?? ""
     };
     setSettings(settings);
-    if (!settings.secretString || settings.secretString?.length != 9) {
+    if (!settings.secretString || settings.secretString?.length !== 9) {
       loaded = true;
       return;
     }
@@ -140,12 +135,9 @@ const App: React.FC = function () {
     loaded = true;
   }, []);
 
-  const colors = useMemo(() => {
-    return playerColors[voiceState.mod];
-  }, [voiceState.mod]);
 
   // console.log("update??", voiceState, loaded);
-  if ((!settings.secretString || settings.secretString.length != 9) && loaded) {
+  if ((!settings.secretString || settings.secretString.length !== 9) && loaded) {
     return (
       <>
         <h2 style={{ color: "black" }}>
@@ -180,7 +172,6 @@ const App: React.FC = function () {
           <MeetingHud
             gameState={voiceState.overlayState}
             voiceState={voiceState}
-            colors={colors}
           />
         )}
       {settings.overlayPosition !== "hidden" && (
@@ -201,7 +192,7 @@ interface AvatarOverlayProps {
   gameState: OverlayState;
   position: ISettings["overlayPosition"];
   compactOverlay: boolean;
-  mod: MODS;
+  mod: ModsType;
 }
 
 const AvatarOverlay: React.FC<AvatarOverlayProps> = ({
@@ -213,7 +204,7 @@ const AvatarOverlay: React.FC<AvatarOverlayProps> = ({
 }: AvatarOverlayProps) => {
   const avatars: JSX.Element[] = [];
   const positionParse = position.replace("1", "");
-  const isOnSide = positionParse == "right" || positionParse == "left";
+  const isOnSide = positionParse === "right" || positionParse === "left";
   const showName =
     isOnSide &&
     (!compactOverlay || position === "right1" || position === "left1");
@@ -282,8 +273,8 @@ const AvatarOverlay: React.FC<AvatarOverlayProps> = ({
             // connectionState={!connected ? 'disconnected' : audio ? 'connected' : 'novoice'}
             player={player}
             showborder={isOnSide && !compactOverlay}
-            muted={player.isLocal}
-            deafened={player.isLocal}
+           // muted={player.isLocal}
+           // deafened={player.isLocal}
             connectionState={'connected'}
             talking={talking}
             borderColor="#2ecc71"
@@ -323,13 +314,11 @@ const AvatarOverlay: React.FC<AvatarOverlayProps> = ({
 interface MeetingHudProps {
   gameState: OverlayState;
   voiceState: VoiceState;
-  colors: string[][];
 }
 
 const MeetingHud: React.FC<MeetingHudProps> = ({
   voiceState,
   gameState,
-  colors,
 }: MeetingHudProps) => {
   const [windowWidth, windowheight] = useWindowSize();
 	const [width, height] = useMemo(() => {
@@ -371,7 +360,9 @@ const MeetingHud: React.FC<MeetingHudProps> = ({
 
   if (!players || gameState.gameState !== GameState.DISCUSSION) return null;
   const overlays = players.map((player) => {
-    const color = colors[player.colorId] ? colors[player.colorId][0] : '#C51111';
+   
+
+    const color = (!player.realColor || player.realColor.length == 0)? "#0000" : player.realColor[0];
 
     return (
       <div
